@@ -18,7 +18,7 @@ export class TranslatePipe implements PipeTransform, OnDestroy {
     this.ngUnsubscribe.complete();
   }
 
-  transform(value: string, attrReplace: any[]): string {
+  transform(value: string, attrReplace?: any[]): string {
     return this.translateService.instant(value, attrReplace);
   }
 

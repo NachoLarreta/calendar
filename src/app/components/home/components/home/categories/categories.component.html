@@ -1,0 +1,5 @@
+<mat-selection-list [multiple]="false">
+  <mat-list-option *ngFor="let category of (calendarService?.categories | async)" [value]="category">
+    {{category.name}}
+  </mat-list-option>
+</mat-selection-list>

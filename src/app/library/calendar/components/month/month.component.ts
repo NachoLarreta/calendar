@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'week',
-  templateUrl: './week.component.html',
-  styleUrls: ['./week.component.scss']
+  selector: 'month',
+  templateUrl: './month.component.html',
+  styleUrls: ['./month.component.scss']
 })
 export class MonthComponent {
 }

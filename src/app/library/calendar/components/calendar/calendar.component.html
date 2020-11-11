@@ -1,8 +1,15 @@
-<div class="row">
-  <div class="col-2">
-    cathegories
+<div class="row container">
+  <div class="col-1">
+    <fa-icon icon="fa-arrow-circle-left"></fa-icon>
   </div>
   <div class="col-10">
-    calendar
+    <h1>{{(calendarService?.monthSelected | async).year.numberOfYear}}</h1>
+    <h2>{{(calendarService?.monthSelected | async).name | translate}}</h2>
+  </div>
+  <div class="col-1">
+    <fa-icon icon="fa-arrow-circle-right"></fa-icon>
+  </div>
+  <div class="col-12">
+    <month></month>
   </div>
 </div>
