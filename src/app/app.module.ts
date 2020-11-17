@@ -5,20 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TranslateService} from './library/translate/services/translate.service';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {HttpClientModule} from '@angular/common/http';
+import {CategorieService} from './services/categorie.service';
+import {UserService} from './services/user.service';
+import {AppointmentService} from './services/appointment.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    HttpClientModule
   ],
   declarations: [
     AppComponent
   ],
   providers: [
-    TranslateService
+    TranslateService,
+    CategorieService,
+    UserService,
+    AppointmentService
   ],
   bootstrap: [AppComponent]
 })

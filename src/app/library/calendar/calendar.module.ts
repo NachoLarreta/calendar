@@ -5,13 +5,11 @@ import {TranslateModule} from '../translate/translate.module';
 import {DayComponent} from './components/day/day.component';
 import {MonthComponent} from './components/month/month.component';
 import {WeekComponent} from './components/week/week.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
     CommonModule,
-    TranslateModule,
-    FontAwesomeModule
+    TranslateModule
   ],
   declarations: [
     CalendarComponent,

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AppointmentService} from '../../services/calendar.service';
+import {CategorieService} from '../../../../../services/categorie.service';
 
 @Component({
   selector: 'categories',
@@ -8,7 +8,7 @@ import {AppointmentService} from '../../services/calendar.service';
 })
 export class CategoriesComponent {
 
-  constructor(public calendarService: AppointmentService) {
+  constructor(public categorieService: CategorieService) {
   }
 
 }

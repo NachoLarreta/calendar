@@ -13,7 +13,7 @@ export class TranslateService{
     constructor(private http: HttpClient) {
         this.dictionary = {};
         this.reloadTranslate = new BehaviorSubject<any>(null);
-        this.locale = 'en';
+        this.locale = navigator.language.split('-')[0];
         this.getDictionary();
     }
 

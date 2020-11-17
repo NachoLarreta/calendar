@@ -1,1 +1,23 @@
-Hola home
+<div class="row">
+  <div class="col-12">
+    <h2>{{(calendarService?.monthSelected | async)?.name | translate}}</h2>
+  </div>
+  <ng-container *ngIf="month && month.weeks && month.weeks.length > 0; else loading">
+    <div class="col-12" *ngFor="let week of month.weeks; let i = index">
+      <week [week]="week" [showDay]="i === 0"></week>
+    </div>
+  </ng-container>
+  <ng-template #loading>
+    <div class="col-12" *ngFor="let counter of Arr(4).fill(1)">
+      <div class="row">
+        <div class="col day-loading"></div>
+        <div class="col day-loading"></div>
+        <div class="col day-loading"></div>
+        <div class="col day-loading"></div>
+        <div class="col day-loading"></div>
+        <div class="col day-loading"></div>
+        <div class="col day-loading"></div>
+      </div>
+    </div>
+  </ng-template>
+</div>

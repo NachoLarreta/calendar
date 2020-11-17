@@ -16,9 +16,9 @@ export class CalendarService {
 
   constructor() {
     this.calendar = new BehaviorSubject<Calendar>(new Calendar());
-    this.initCalendar();
     this.monthSelected = new BehaviorSubject<Month>(null);
     this.daySelected = new BehaviorSubject<Day>(null);
+    this.initCalendar();
   }
 
   initCalendar() {
