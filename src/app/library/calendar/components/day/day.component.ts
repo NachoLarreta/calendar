@@ -10,5 +10,7 @@ export class DayComponent {
 
   @Input()
   day: Day;
+  @Input()
+  emptyDay: boolean;
 
 }

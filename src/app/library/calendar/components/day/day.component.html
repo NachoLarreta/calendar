@@ -1,5 +1,8 @@
 <div class="row">
-  <div class="col-12">
+  <div class="col-12" *ngIf="!emptyDay; else emptyDayTemplate">
     day {{day?.numberOfDay}}
   </div>
+  <ng-template #emptyDayTemplate>
+    <div class="col-12"></div>
+  </ng-template>
 </div>

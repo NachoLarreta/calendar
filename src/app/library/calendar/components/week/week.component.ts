@@ -13,4 +13,6 @@ export class WeekComponent {
   @Input()
   showDay: boolean;
 
+  Arr = Array;
+
 }

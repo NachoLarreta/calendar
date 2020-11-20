@@ -1,34 +1,58 @@
 <div class="row">
   <div class="col-12" *ngIf="showDay">
-    <div class="row">
-      <div class="col">
-        {{'mondays' | translate}}
-      </div>
-      <div class="col">
-        {{'tuesdays' | translate}}
-      </div>
-      <div class="col">
-        {{'wednesdays' | translate}}
-      </div>
-      <div class="col">
-        {{'thursdays' | translate}}
-      </div>
-      <div class="col">
-        {{'fridays' | translate}}
-      </div>
-      <div class="col">
-        {{'saturdays' | translate}}
-      </div>
-      <div class="col">
-        {{'sundays' | translate}}
-      </div>
+    <div class="day-container d-none d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">
+      {{'sunday' | translate}}
+    </div>
+    <div class="day-container d-none d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">
+      {{'monday' | translate}}
+    </div>
+    <div class="day-container d-none d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">
+      {{'tuesday' | translate}}
+    </div>
+    <div class="day-container d-none d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">
+      {{'wednesday' | translate}}
+    </div>
+    <div class="day-container d-none d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">
+      {{'thursday' | translate}}
+    </div>
+    <div class="day-container d-none d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">
+      {{'friday' | translate}}
+    </div>
+    <div class="day-container d-none d-sm-none d-md-none d-lg-inline-block d-xl-inline-block">
+      {{'saturday' | translate}}
+    </div>
+    <div class="day-container d-lg-none d-xl-none">
+      {{'sunday_short' | translate}}
+    </div>
+    <div class="day-container d-lg-none d-xl-none">
+      {{'monday_short' | translate}}
+    </div>
+    <div class="day-container d-lg-none d-xl-none">
+      {{'tuesday_short' | translate}}
+    </div>
+    <div class="day-container d-lg-none d-xl-none">
+      {{'wednesday_short' | translate}}
+    </div>
+    <div class="day-container d-lg-none d-xl-none">
+      {{'thursday_short' | translate}}
+    </div>
+    <div class="day-container d-lg-none d-xl-none">
+      {{'friday_short' | translate}}
+    </div>
+    <div class="day-container d-lg-none d-xl-none">
+      {{'saturday_short' | translate}}
     </div>
   </div>
   <div class="col-12" *ngIf="week && week.days && week.days.length > 0">
-    <div class="row">
-      <div class="col" *ngFor="let day of week.days">
+    <ng-container *ngFor="let day of week.days; let i = index">
+      <ng-container *ngIf="i === 0 && day.numberOfWeekDay !== 0">
+        <div class="day-container" *ngFor="let i of Arr(day.numberOfWeekDay).fill(1)">
+          <day [emptyDay]="true"></day>
+        </div>
+      </ng-container>
+      <div class="day-container">
         <day [day]="day"></day>
       </div>
-    </div>
+    </ng-container>
   </div>
 </div>

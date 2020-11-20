@@ -1,3 +1,17 @@
 {
-  "november": "Noviembre"
+  "november": "Noviembre",
+  "sunday": "Domingo",
+  "monday": "Lunes",
+  "tuesday": "Martes",
+  "wednesday": "Miercoles",
+  "thursday": "Jueves",
+  "friday": "Viernes",
+  "saturday": "Sabado",
+  "sunday_short": "Do",
+  "monday_short": "Lu",
+  "tuesday_short": "Ma",
+  "wednesday_short": "Mi",
+  "thursday_short": "Ju",
+  "friday_short": "Vi",
+  "saturday_short": "Sa"
 }

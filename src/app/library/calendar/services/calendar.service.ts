@@ -94,7 +94,7 @@ export class CalendarService {
   }
 
   loadMonths(year: Year) {
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < 12; i++) {
       const month: Month = new Month(year);
       month.numberOfMonth = i;
       this.loadWeek(month);
@@ -105,12 +105,12 @@ export class CalendarService {
   loadWeek(month: Month) {
     let week: Week = new Week(month);
     for (let i = 1; i <= month.numberOfDays; i++) {
-      const weekDay: number = dayjs(`${month.year.numberOfYear}-${month.numberOfMonth}-${i}`).day();
+      const weekDay: number = dayjs(`${month.year.numberOfYear}-${month.numberOfMonth + 1}-${i}`).day();
       const day: Day = new Day(week);
       day.numberOfDay = i;
       day.numberOfWeekDay = weekDay;
       week.days.push(day);
-      if (weekDay === 0) {
+      if (weekDay === 6 || i === month.numberOfDays) {
         month.weeks.push(week);
         week = new Week(month);
       }
