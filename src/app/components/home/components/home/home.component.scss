@@ -1,4 +1,19 @@
-.custom-container {
-  margin-right: -20px;
-  margin-left: -12px;
+@import './src/assets/scss/variables';
+
+.left-menu {
+  position: absolute;
+  background: var(--color-secondary);
+  z-index: 1;
+  height: 100%;
+  width: 50%;
+}
+.hover {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  background: var(--color-secondary);;
+  opacity: 0.5;
+  transform: translateX(100%);
+  top: 0;
 }
